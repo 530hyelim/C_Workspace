@@ -68,7 +68,52 @@ int main(void) {
 	printf("chArray : %s\n\n", chArray);
 	strcpy_s(chArray2, 30, "i am fine, thank you.");
 	printf("chArray2 : %s\n\n", chArray2);
-
 	system("pause");
+
+	/*
+	* scanf_s 함수
+	*	- 콘솔 창을 통한 입력 방법
+	*	- 입력 서식 문자를 사용해 입력을 받는다
+	*	- 입력된 값을 변수에 저장한다
+	*	- 사용하기 위해 #include<stdio.h> 필요
+	*	- &변수명: 변수의 주소값을 리턴해주는 역할
+	* 
+	* 입력 서식 문자
+	*	- 정수 타입(short: %hd, int: %d, long: %ld, longlong: %lld)
+	*	- unsigned 정수 타입(unsigned short: %hu, unsigned int: %u, unsigned long: %lu, unsigned longlong: %llu)
+	*	- 실수 타입(float: %f, double: %lf)
+	*	- 문자 타입(문자: %c, 문자열: %s)
+	*		-> 단, 입력 받을 문자열의 길이를 미리 지정한다
+	*		-> 지정된 길이보다 긴 문자열 입력시 에러발생, 아무 값도 입력받지 않는다
+	*		-> 문자열을 띄어쓰기 하는 경우, 띄어쓰기 전까지만 입력된다
+	*/
+	int iVar;
+	printf("int input : ");
+	scanf_s("%d", &iVar);
+	printf("int output : %d\n\n", iVar);
+
+	float fVar;
+	printf("float input : ");
+	scanf_s("%f", &fVar);
+	printf("float output : %f\n\n", fVar);
+
+	unsigned long uLongVar;
+	printf("unsigned long input : ");
+	scanf_s("%lu", &uLongVar);
+	printf("unsigned long output : %lu\n\n", uLongVar);
+
+	getchar(); // 개행문자 처리
+
+	char cVar;
+	printf("문자 하나 입력 : ");
+	scanf_s("%c", &cVar, 1);
+	printf("cVar1 : %c\n\n", cVar);
+
+	char cArr[30];
+	printf("문자열(30자) 입력 : ");
+	scanf_s("%s", cArr, 30); // 문자열을 입력 받을 때는 & 사용X
+	printf("cArr : %s\n\n", cArr);
+	system("pause");
+
 	return 0;
 }
