@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="왕초보C_2차(1)실습과제_서혜림.c">
+    <ClCompile Include="왕초보C_2차(2)실습과제_서혜림.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
